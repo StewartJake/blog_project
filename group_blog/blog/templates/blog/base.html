@@ -24,12 +24,16 @@
 	</head>
 	<body class='loader'>
 		<!--  NAVBAR -->
-		<nav class="navbar navbar-expand-sm techfont custom-navbar sticky-top navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md techfont custom-navbar sticky-top navbar-dark bg-dark">
 			<div class="container">
 				<ul class="navbar-nav">
 					<li>
 						<a class="navbar-brand nav-link bigbrand" href="{% url 'post_list' %}">My Blog</a>
 					</li>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_me" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    						<span class="navbar-toggler-icon"></span>
+  					</button>
+					<div class="collapse navbar-collapse" id="collapse_me">
 					<li class="nav-link">
 						<a href="{% url 'about' %}">About</a>
 					</li>
@@ -56,10 +60,12 @@
 					</li>
 					{% else %}
 					<li>
-						<a class="navbar-right" href="{% url 'login' %}">
+						<a href="{% url 'login' %}">
 							<i class="fas fa-user"></i>
 						</a>
 					</li>
+				</ul>
+					</div>
 					{% endif %}
 				</div>
 		</nav>
